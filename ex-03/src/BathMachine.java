@@ -80,4 +80,22 @@ public class BathMachine {
         this.clean = this.pet.isClean();
         this.pet = null;
     }
+
+    public void washMachine() {
+        if (hasPet()) {
+            System.out.println("Antes de lavar a máquina, remova o pet: " + this.pet.getName());
+            return;
+        }
+        if (water < 10 || shampoo < 2) {
+            System.out.println("Não há água ou shampoo suficiente para lavar a máquina.");
+            return;
+        }
+        if(!this.clean) {
+            System.out.println("Lavando a máquina de banho...");
+            this.water -= 10;
+            this.shampoo -= 2;
+            this.clean = true;
+            System.out.println("Máquina de banho lavada com sucesso.");
+        }
+    }
 }
