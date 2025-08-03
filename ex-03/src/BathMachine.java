@@ -5,6 +5,13 @@ public class BathMachine {
     private int shampoo;
     private Pet pet;
 
+    public BathMachine() {
+        this.clean = true; // A máquina começa limpa
+        this.water = 30; // Capacidade máxima de água
+        this.shampoo = 10; // Capacidade máxima de shampoo
+        this.pet = null; // Inicialmente, não há pet na máquina
+    }
+
     public void showering(){
         if (pet == null) {
             System.out.println("No pet to shower.");
