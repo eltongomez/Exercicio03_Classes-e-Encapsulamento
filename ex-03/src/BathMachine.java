@@ -52,4 +52,32 @@ public class BathMachine {
     public int getShampoo() {
         return shampoo;
     }
+
+    public boolean hasPet() {
+        return pet != null;
+    }
+
+    public void setPet(Pet pet) {
+
+        if(hasPet()){
+            System.out.println("O Pet: "+ this.pet.getName() + " está tomando banho.");
+            return;
+        }
+
+        if(!this.clean){
+            System.out.println("A máquina de banho não está limpa. Por favor, limpe-a antes de adicionar um novo pet.");
+            return;
+        }
+        this.pet = pet;
+    }
+
+    public void removePet() {
+        if (this.pet == null) {
+            System.out.println("Nenhum pet para remover.");
+            return;
+        }
+        System.out.println("Removendo " + this.pet.getName() + " da máquina de banho.");
+        this.clean = this.pet.isClean();
+        this.pet = null;
+    }
 }
