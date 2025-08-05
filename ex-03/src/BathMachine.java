@@ -64,6 +64,10 @@ public class BathMachine {
         return pet != null;
     }
 
+    public Pet getPet() {
+        return pet;
+    }
+
     public void setPet(Pet pet) {
 
         if(hasPet()){
