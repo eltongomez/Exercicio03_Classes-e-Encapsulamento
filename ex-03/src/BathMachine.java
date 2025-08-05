@@ -14,15 +14,15 @@ public class BathMachine {
 
     public void showering(){
         if (pet == null) {
-            System.out.println("No pet to shower.");
+            System.out.println("Não há pet na máquina.");
             return;
         }
         if (water <= 0) {
-            System.out.println("No water available.");
+            System.out.println("Água insuficiente para o banho.");
             return;
         }
         if (shampoo <= 0) {
-            System.out.println("No shampoo available.");
+            System.out.println("Shampoo insuficiente para o banho.");
             return;
         }
 
@@ -31,7 +31,7 @@ public class BathMachine {
         clean = true;
         water -= 10;
         shampoo -= 2;
-        System.out.println(pet.getName() + " is now clean.");
+        System.out.println(pet.getName() + " O pet está limpo.");
     }
 
     public void addWater() {
